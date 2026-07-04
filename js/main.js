@@ -1,0 +1,112 @@
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const slides = document.querySelectorAll(".slide");
+const photoPhrase = document.getElementById("photoPhrase");
+const amountInput = document.getElementById("amountInput");
+const amountRange = document.getElementById("amountRange");
+const termSelect = document.getElementById("termSelect");
+const precalificaHero = document.getElementById("precalificaHero");
+const leadForm = document.getElementById("leadForm");
+const formMessage = document.getElementById("formMessage");
+
+let currentSlide = 0;
+
+const phrases = [
+  `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`,
+  `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`,
+  `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`
+];
+
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
+function changeSlide() {
+  if (!slides.length) return;
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+  if (photoPhrase) {
+    photoPhrase.innerHTML = phrases[currentSlide];
+  }
+}
+
+if (slides.length > 0) {
+  setInterval(changeSlide, 6000);
+}
+
+function formatAmount(value) {
+  return new Intl.NumberFormat("es-PE", {
+    style: "currency",
+    currency: "PEN",
+    minimumFractionDigits: 0
+  }).format(value);
+}
+
+function syncAmount(source) {
+  if (!amountInput || !amountRange) return;
+  let amount = Number(source.value);
+  const min = Number(amountInput.min);
+  const max = Number(amountInput.max);
+  if (amount < min) amount = min;
+  if (amount > max) amount = max;
+  amountInput.value = amount;
+  amountRange.value = amount;
+}
+
+if (amountInput && amountRange) {
+  amountRange.addEventListener("input", () => {
+    syncAmount(amountRange);
+  });
+  amountInput.addEventListener("input", () => {
+    syncAmount(amountInput);
+  });
+}
+
+if (precalificaHero) {
+  precalificaHero.addEventListener("click", () => {
+    const montoForm = document.getElementById("monto");
+    const plazoForm = document.getElementById("plazo");
+    if (montoForm && amountInput) {
+      montoForm.value = formatAmount(Number(amountInput.value));
+    }
+    if (plazoForm && termSelect) {
+      plazoForm.value = `${termSelect.value} meses`;
+    }
+  });
+}
+
+if (leadForm) {
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const producto = document.getElementById("producto").value;
+    const monto = document.getElementById("monto").value.trim();
+    const plazo = document.getElementById("plazo").value;
+    const distrito = document.getElementById("distrito").value.trim();
+    const acepta = document.getElementById("acepta").checked;
+    const telefonoValido = /^[0-9]{9}$/.test(telefono);
+
+    if (!nombre || !telefono || !producto || !monto || !plazo || !distrito || !acepta) {
+      mostrarMensaje("Completa todos los campos antes de enviar.", "error");
+      return;
+    }
+
+    if (!telefonoValido) {
+      mostrarMensaje("El teléfono debe tener 9 dígitos. Ejemplo: 987654321.", "error");
+      return;
+    }
+
+    mostrarMensaje("Solicitud registrada correctamente. Un asesor de CrediReal se comunicará contigo.", "success");
+    leadForm.reset();
+  });
+}
+
+function mostrarMensaje(texto, tipo) {
+  if (!formMessage) return;
+  formMessage.textContent = texto;
+  formMessage.className = `form-message ${tipo}`;
+}
