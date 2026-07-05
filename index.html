@@ -3,55 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrediReal | Crédito con Garantía Hipotecaria</title>
-  <meta name="description" content="Crédito con garantía hipotecaria para impulsar tu negocio, tu obra o ese proyecto que no puede esperar." />
+  <title>CrediReal | Soluciones financieras con respaldo real</title>
+  <meta name="description" content="Créditos, soluciones rápidas, instrumentos financieros, inversiones inmobiliarias y atención en agencias de CrediReal." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
   <header class="header">
     <div class="header-container">
-      <a href="#inicio" class="brand logo-brand">
-        <img
-          src="assets/logo/credireal-logo.svg"
-          alt="CrediReal"
-          class="brand-logo"
-        />
-
+      <a href="#inicio" class="brand logo-brand" aria-label="Ir al inicio de CrediReal">
+        <img src="assets/logo/credireal-logo.svg" alt="CrediReal" class="brand-logo" />
         <span class="brand-slogan">Tu financiera de confianza</span>
       </a>
-    
+
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
 
-      <nav class="nav" id="navLinks">
-        <a href="#inicio" class="active">Inicio</a>
-        <a href="#creditos">Créditos</a>
-        <a href="#funciona">Cómo funciona</a>
-        <a href="#requisitos">Requisitos</a>
-        <a href="#contacto">Contacto</a>
+      <nav class="nav" id="navLinks" aria-label="Menú principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+
+        <div class="nav-item has-mega">
+          <button class="nav-link nav-trigger" type="button">Créditos <span>⌄</span></button>
+
+          <div class="mega-menu mega-creditos">
+            <div class="mega-column">
+              <h4>Créditos para tu negocio</h4>
+
+              <a href="#creditos" class="mega-link" data-product="Capital de trabajo">
+                <span>▣</span>
+                <div>
+                  <strong>Capital de trabajo</strong>
+                  <small>Financia tus operaciones y campañas.</small>
+                </div>
+              </a>
+
+              <a href="#creditos" class="mega-link" data-product="Activos">
+                <span>▤</span>
+                <div>
+                  <strong>Activos</strong>
+                  <small>Maquinaria, equipos o herramientas.</small>
+                </div>
+              </a>
+
+              <a href="#creditos" class="mega-link" data-product="Vehicular">
+                <span>▱</span>
+                <div>
+                  <strong>Vehicular</strong>
+                  <small>Financia tu vehículo de trabajo.</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h4>Créditos para ti</h4>
+
+              <a href="#creditos" class="mega-link" data-product="Personal">
+                <span>◎</span>
+                <div>
+                  <strong>Personal</strong>
+                  <small>Para proyectos o necesidades.</small>
+                </div>
+              </a>
+
+              <a href="#creditos" class="mega-link" data-product="Construcción">
+                <span>⌂</span>
+                <div>
+                  <strong>Construcción</strong>
+                  <small>Construye o mejora tu propiedad.</small>
+                </div>
+              </a>
+            </div>
+
+            <div class="mega-column">
+              <h4>Con garantía hipotecaria</h4>
+
+              <a href="#inicio" class="mega-link" data-product="Crédito con garantía hipotecaria">
+                <span>⌂</span>
+                <div>
+                  <strong>Crédito con garantía hipotecaria</strong>
+                  <small>Usa tu propiedad sin venderla.</small>
+                </div>
+              </a>
+
+              <a href="#formulario" class="mega-link">
+                <span>◈</span>
+                <div>
+                  <strong>Refinanciamiento</strong>
+                  <small>Evalúa mejores condiciones.</small>
+                </div>
+              </a>
+            </div>
+
+            <a href="#creditos" class="mega-footer-link">Ver todos los créditos →</a>
+          </div>
+        </div>
+
+        <div class="nav-item has-mega">
+          <button class="nav-link nav-trigger" type="button">Soluciones rápidas <span>⌄</span></button>
+
+          <div class="mega-menu mega-small">
+            <div class="mega-column">
+              <h4>Soluciones rápidas</h4>
+
+              <a href="#soluciones-rapidas" class="mega-link">
+                <span>⚡</span>
+                <div>
+                  <strong>Créditos pequeños</strong>
+                  <small>Desde S/ 100 hasta S/ 20,000.</small>
+                </div>
+              </a>
+
+              <a href="#soluciones-rapidas" class="mega-link">
+                <span>◇</span>
+                <div>
+                  <strong>Crédito con joyas</strong>
+                  <small>Liquidez inmediata.</small>
+                </div>
+              </a>
+
+              <a href="#soluciones-rapidas" class="mega-link">
+                <span>▣</span>
+                <div>
+                  <strong>Artefactos y vehículos</strong>
+                  <small>Préstamos prendarios.</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item has-mega">
+          <button class="nav-link nav-trigger" type="button">Instrumentos <span>⌄</span></button>
+
+          <div class="mega-menu mega-small">
+            <div class="mega-column">
+              <h4>Instrumentos financieros</h4>
+
+              <a href="#instrumentos" class="mega-link">
+                <span>$</span>
+                <div>
+                  <strong>Tipo de cambio</strong>
+                  <small>Compra y venta de dólares.</small>
+                </div>
+              </a>
+
+              <a href="#instrumentos" class="mega-link">
+                <span>▤</span>
+                <div>
+                  <strong>Cartas fianzas</strong>
+                  <small>Para obras y contratistas.</small>
+                </div>
+              </a>
+
+              <a href="#instrumentos" class="mega-link">
+                <span>◉</span>
+                <div>
+                  <strong>SOAT</strong>
+                  <small>Compra o renovación rápida.</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#inmobiliaria" class="nav-link">Inmobiliaria</a>
+        <a href="#actualidad" class="nav-link">Actualidad</a>
+        <a href="#agencias" class="nav-link">Agencias</a>
+
+        <a href="#trabaja" class="work-header-btn">Trabaja con nosotros <span>♧</span></a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- FASE 1 APROBADA: NO MODIFICAR SIN AUTORIZACIÓN -->
     <section class="hero" id="inicio">
       <div class="hero-grid">
         <div class="hero-photo">
           <img src="assets/images/17.png" alt="Familia revisando proyecto de construcción" class="slide active" />
           <img src="assets/images/10.png" alt="Familia emprendedora planificando su negocio" class="slide" />
           <img src="assets/images/13.png" alt="Emprendedores revisando mercadería" class="slide" />
-
           <div class="photo-shade"></div>
-
           <div class="photo-message">
             <span class="gold-line"></span>
-            <h2 id="photoPhrase">
-              Tu historial crediticio<br>
-              no define todas tus<br>
-              <em>oportunidades.</em>
-            </h2>
+            <h2 id="photoPhrase">Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em></h2>
           </div>
-
           <div class="social-icons">
             <a href="https://www.tiktok.com/@bancareal_" class="social tiktok" aria-label="TikTok de CrediReal" target="_blank" rel="noopener noreferrer">♪</a>
             <a href="https://www.facebook.com/BancaRealyCrediReal" class="social facebook" aria-label="Facebook de CrediReal" target="_blank" rel="noopener noreferrer">f</a>
@@ -62,262 +196,194 @@
 
         <div class="hero-content">
           <div class="hero-title-area">
-            <h1>
-              Crédito con Garantía<br>
-              <span>Hipotecaria</span>
-            </h1>
+            <h1>Crédito con Garantía<br><span>Hipotecaria</span></h1>
           </div>
-
           <div class="hero-boxes">
             <div class="request-card">
-              <div class="request-title">
-                <div class="shield">✥</div>
-                <h3>Solicítalo aquí</h3>
-              </div>
-
+              <div class="request-title"><div class="shield">✥</div><h3>Solicítalo aquí</h3></div>
               <div class="field">
                 <label for="amountInput">Monto que deseas solicitar</label>
-                <div class="amount-box">
-                  <span>S/</span>
-                  <input type="number" id="amountInput" min="20000" max="500000" step="1000" value="30000" />
-                </div>
+                <div class="amount-box"><span>S/</span><input type="number" id="amountInput" min="20000" max="500000" step="1000" value="30000" /></div>
                 <input type="range" id="amountRange" min="20000" max="500000" step="1000" value="30000" />
-                <div class="range-labels">
-                  <small>S/ 20 mil</small>
-                  <small>S/ 500 mil</small>
-                </div>
+                <div class="range-labels"><small>S/ 20 mil</small><small>S/ 500 mil</small></div>
               </div>
-
               <div class="field">
                 <label for="termSelect">Plazo deseado</label>
-                <select id="termSelect">
-                  <option value="6">6 meses</option>
-                  <option value="12" selected>12 meses</option>
-                  <option value="18">18 meses</option>
-                  <option value="24">24 meses</option>
-                  <option value="36">36 meses</option>
-                </select>
+                <select id="termSelect"><option value="6">6 meses</option><option value="12" selected>12 meses</option><option value="18">18 meses</option><option value="24">24 meses</option><option value="36">36 meses</option></select>
               </div>
-
-              <a href="#formulario" class="main-btn" id="precalificaHero">
-                Precalifica ahora
-                <span>→</span>
-              </a>
-
+              <a href="#formulario" class="main-btn" id="precalificaHero">Precalifica ahora <span>→</span></a>
               <p class="legal-mini">Sujeto a evaluación crediticia, documentaria y legal.</p>
             </div>
-
             <div class="advisor-card">
-              <div>
-                <span>¿Tienes dudas?</span>
-                <strong>Conversa con un asesor</strong>
-              </div>
-              <a href="https://wa.me/51988123456" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                <span>☘</span>
-                WhatsApp
-                <b>›</b>
-              </a>
+              <div><span>¿Tienes dudas?</span><strong>Conversa con un asesor</strong></div>
+              <a href="https://wa.me/51988123456" target="_blank" rel="noopener noreferrer" class="whatsapp-btn"><span>☘</span> WhatsApp <b>›</b></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="trust-strip">
-        <div class="trust-card">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 1 0 7 7" /><path d="M12 7v3l2 2" /><path d="M18 14l3 3" /><path d="M21 14v3h-3" /></svg>
-          </div>
-          <span></span>
-          <p>100%<br>Confidencial</p>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 1 0 7 7"/><path d="M12 7v3l2 2"/><path d="M18 14l3 3"/><path d="M21 14v3h-3"/></svg></div><span></span><p>100%<br>Confidencial</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg></div><span></span><p>Datos<br>Protegidos</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M4 13l8-7 8 7"/><path d="M6 11v8h12v-8"/><path d="M9 19v-5h6v5"/><path d="M3 20h18"/></svg></div><span></span><p>Usa tu propiedad<br>sin venderla</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></div><span></span><p>Aprobación<br>rápida</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><path d="M9 14l3 3 3-3"/></svg></div><span></span><p>Asesoría<br>profesional</p></div>
+      </div>
+    </section>
+
+    <!-- FASE 2: ARQUITECTURA COMERCIAL -->
+    <section class="solutions-section" id="soluciones">
+      <div class="container">
+        <div class="section-title centered">
+          <span class="eyebrow">Soluciones CrediReal</span>
+          <h2>Elige la solución que necesitas</h2>
+          <p>Organizamos nuestras líneas para que encuentres rápido el producto que encaja con tu negocio, proyecto o necesidad.</p>
         </div>
 
-        <div class="trust-card">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" /><path d="M9 12l2 2 4-5" /></svg>
-          </div>
-          <span></span>
-          <p>Datos<br>Protegidos</p>
-        </div>
+        <div class="solution-grid">
+          <article class="solution-card" id="creditos">
+            <div class="solution-icon">💼</div>
+            <h3>Créditos</h3>
+            <p>Financiamiento para crecer, invertir, construir o resolver una necesidad importante.</p>
+            <ul><li>Capital de trabajo</li><li>Activos</li><li>Construcción</li><li>Vehicular</li><li>Personal</li></ul>
+            <a href="#creditos-detalle" class="outline-btn">Conoce más →</a>
+          </article>
 
-        <div class="trust-card">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 13l8-7 8 7" /><path d="M6 11v8h12v-8" /><path d="M9 19v-5h6v5" /><path d="M3 20h18" /></svg>
-          </div>
-          <span></span>
-          <p>Usa tu propiedad<br>sin venderla</p>
-        </div>
+          <article class="solution-card" id="soluciones-rapidas">
+            <div class="solution-icon">⚡</div>
+            <h3>Soluciones rápidas</h3>
+            <p>Liquidez inmediata con créditos pequeños y opciones prendarias.</p>
+            <ul><li>Desde S/ 100 hasta S/ 20,000</li><li>Joyas</li><li>Artefactos</li><li>Vehículos</li></ul>
+            <a href="#rapidas-detalle" class="outline-btn">Ver opciones →</a>
+          </article>
 
-        <div class="trust-card">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><path d="M12 7v5l3 2" /></svg>
-          </div>
-          <span></span>
-          <p>Aprobación<br>rápida</p>
-        </div>
+          <article class="solution-card" id="instrumentos">
+            <div class="solution-icon">📈</div>
+            <h3>Instrumentos financieros</h3>
+            <p>Herramientas que impulsan tu gestión, seguridad y operaciones.</p>
+            <ul><li>Tipo de cambio</li><li>Cartas fianzas</li><li>Venta de SOAT</li></ul>
+            <a href="#instrumentos-detalle" class="outline-btn">Ver instrumentos →</a>
+          </article>
 
-        <div class="trust-card">
-          <div class="trust-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M6 21v-2a6 6 0 0 1 12 0v2" /><path d="M9 14l3 3 3-3" /></svg>
-          </div>
-          <span></span>
-          <p>Asesoría<br>profesional</p>
+          <article class="solution-card" id="inmobiliaria">
+            <div class="solution-icon">🏡</div>
+            <h3>Inversiones inmobiliarias</h3>
+            <p>Oportunidades para invertir en terrenos con respaldo y confianza.</p>
+            <ul><li>Venta de terrenos</li><li>Asesoría para inversión</li><li>Proyectos disponibles</li></ul>
+            <a href="#inmobiliaria-detalle" class="outline-btn">Ver terrenos →</a>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="creditos-detalle">
+      <div class="container">
+        <div class="section-title"><span class="eyebrow">Créditos principales</span><h2>Financiamiento según tu objetivo</h2></div>
+        <div class="product-row">
+          <article><b>💼</b><h3>Capital de trabajo</h3><p>Hasta 12 meses para mercadería, proveedores y campañas.</p></article>
+          <article><b>🏭</b><h3>Activos</h3><p>Hasta 24 meses para maquinaria, equipos y herramientas.</p></article>
+          <article><b>🏗</b><h3>Construcción</h3><p>Hasta 36 meses para obras, ampliaciones o remodelación.</p></article>
+          <article><b>🚗</b><h3>Vehicular</h3><p>Hasta 36 meses según evaluación del caso.</p></article>
+          <article><b>👤</b><h3>Personal</h3><p>Liquidez para necesidades importantes y proyectos familiares.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section soft-bg" id="rapidas-detalle">
+      <div class="container split-detail">
+        <div class="section-title"><span class="eyebrow">Soluciones rápidas</span><h2>Liquidez simple y ágil</h2><p>Opciones pequeñas y prendarias para necesidades de corto plazo.</p></div>
+        <div class="mini-list">
+          <div><strong>⚡ Créditos pequeños</strong><span>Desde S/ 100 hasta S/ 20,000 con pagos mensuales, semanales o quincenales.</span></div>
+          <div><strong>💍 Prendario con joyas</strong><span>Atención inmediata según evaluación.</span></div>
+          <div><strong>📱 Prendario con artefactos</strong><span>Usa bienes como respaldo.</span></div>
+          <div><strong>🚘 Prendario vehicular</strong><span>Crédito inmediato con vehículo como garantía.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="instrumentos-detalle">
+      <div class="container">
+        <div class="section-title centered"><span class="eyebrow">Instrumentos financieros</span><h2>Más herramientas para tu operación</h2></div>
+        <div class="three-grid">
+          <article><b>💵</b><h3>Tipo de cambio</h3><p>Compra y venta de dólares para personas y negocios.</p></article>
+          <article><b>📄</b><h3>Cartas fianzas</h3><p>Para obras de construcción, contratistas y empresas.</p></article>
+          <article><b>🛡</b><h3>SOAT</h3><p>Compra o renovación rápida de SOAT.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section soft-bg" id="inmobiliaria-detalle">
+      <div class="container inmobiliaria-panel">
+        <div><span class="eyebrow">Inversiones inmobiliarias</span><h2>Terrenos y oportunidades de inversión</h2><p>Una línea especializada para venta de terrenos, lotes y futuros proyectos inmobiliarios.</p><a href="#contacto" class="gold-btn">Consultar terrenos →</a></div>
+        <div class="property-card"><span>🏡</span><h3>Venta de terrenos</h3><p>Consulta disponibilidad, ubicación y condiciones de inversión.</p></div>
+      </div>
+    </section>
+
+    <section class="news-section" id="actualidad">
+      <div class="container">
+        <div class="section-title centered"><span class="eyebrow">Actualidad CrediReal</span><h2>Entrevistas, estudios y campañas</h2><p>Contenido para empresarios, emprendedores y familias que toman decisiones financieras.</p></div>
+        <div class="news-grid">
+          <article class="news-card"><div class="news-img gradient-one"><span>🎙</span></div><small>ENTREVISTAS</small><h3>Entrevistas a empresarios</h3><p>Historias reales, aprendizajes y visión de negocio.</p><a href="#contacto">Ver más →</a></article>
+          <article class="news-card"><div class="news-img gradient-two"><span>📊</span></div><small>ESTUDIOS</small><h3>Estudios y campañas</h3><p>Análisis de mercado, temporadas comerciales y oportunidades.</p><a href="#contacto">Ver más →</a></article>
+          <article class="news-card"><div class="news-img gradient-three"><span>💡</span></div><small>CONSEJOS</small><h3>Consejos financieros</h3><p>Recomendaciones para tomar mejores decisiones.</p><a href="#contacto">Ver más →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="agency-section" id="agencias">
+      <div class="container">
+        <div class="section-title centered"><span class="eyebrow">Canales de atención</span><h2>Nuestras agencias</h2></div>
+        <div class="agency-grid">
+          <article><b>📍</b><h3>Huancayo</h3><p>Atención presencial.</p><a href="#contacto">Ver ubicación →</a></article>
+          <article><b>📍</b><h3>Chupaca</h3><p>Atención presencial.</p><a href="#contacto">Ver ubicación →</a></article>
+          <article><b>📍</b><h3>Chilca</h3><p>Atención presencial.</p><a href="#contacto">Ver ubicación →</a></article>
+          <article><b>💻</b><h3>Agencia Virtual Lima</h3><p>Atención digital para Lima y evaluación preliminar.</p><a href="#contacto">Atención online →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-banner" id="trabaja">
+      <div class="container work-inner">
+        <div><h2>Trabaja con nosotros</h2><p>Sé parte de un equipo que transforma vidas y construye oportunidades.</p></div>
+        <div class="work-call"><span>🤝</span><strong>Únete como asesor, analista o promotor.</strong></div>
+        <a href="#postula" class="gold-btn">Conoce más →</a>
       </div>
     </section>
 
     <section class="form-section" id="formulario">
       <div class="container form-grid">
-        <div class="form-copy">
-          <span class="pill">Precalificación inicial</span>
-          <h2>Evalúa tu crédito sin compromiso</h2>
-          <p>Completa tus datos básicos y un asesor de CrediReal se comunicará contigo. En esta primera etapa no solicitamos documentos sensibles.</p>
-          <ul>
-            <li>Atención personalizada.</li>
-            <li>Evaluación responsable.</li>
-            <li>Proceso claro y seguro.</li>
-          </ul>
-        </div>
-
-        <div class="form-card">
-          <h3>Precalifica tu crédito</h3>
-          <p>Déjanos tus datos y te contactaremos.</p>
-
+        <div class="form-copy"><span class="pill">Precalificación inicial</span><h2>Evalúa tu crédito sin compromiso</h2><p>Completa tus datos básicos y un asesor de CrediReal se comunicará contigo. En esta primera etapa no solicitamos documentos sensibles.</p><ul><li>Atención personalizada.</li><li>Evaluación responsable.</li><li>Proceso claro y seguro.</li></ul></div>
+        <div class="form-card"><h3>Precalifica tu crédito</h3><p>Déjanos tus datos y te contactaremos.</p>
           <form id="leadForm">
-            <div class="input-group">
-              <label for="nombre">Nombres y apellidos</label>
-              <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required />
-            </div>
-
-            <div class="input-group">
-              <label for="telefono">Teléfono / WhatsApp</label>
-              <input type="tel" id="telefono" placeholder="Ej. 987654321" required />
-            </div>
-
-            <div class="input-group">
-              <label for="producto">Producto solicitado</label>
-              <select id="producto" required>
-                <option value="">Selecciona una opción</option>
-                <option>Crédito con garantía hipotecaria</option>
-                <option>Capital de trabajo</option>
-                <option>Mercadería por campaña</option>
-                <option>Maquinaria y equipo</option>
-                <option>Construcción o remodelación</option>
-                <option>Importaciones</option>
-                <option>Compra de local comercial</option>
-                <option>Libre disponibilidad</option>
-              </select>
-            </div>
-
-            <div class="two-fields">
-              <div class="input-group">
-                <label for="monto">Monto solicitado</label>
-                <input type="text" id="monto" placeholder="S/ 30,000" required />
-              </div>
-              <div class="input-group">
-                <label for="plazo">Plazo deseado</label>
-                <select id="plazo" required>
-                  <option value="">Selecciona</option>
-                  <option>6 meses</option>
-                  <option>12 meses</option>
-                  <option>18 meses</option>
-                  <option>24 meses</option>
-                  <option>36 meses</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="input-group">
-              <label for="distrito">Distrito del predio</label>
-              <input type="text" id="distrito" placeholder="Ej. Santiago de Surco" required />
-            </div>
-
-            <label class="check">
-              <input type="checkbox" id="acepta" required />
-              <span>Acepto ser contactado por CrediReal para evaluar mi solicitud.</span>
-            </label>
-
-            <button type="submit" class="main-btn form-submit">Enviar solicitud <span>→</span></button>
-
-            <small class="legal-note">La solicitud está sujeta a evaluación crediticia, documentaria y legal. El envío del formulario no representa aprobación automática.</small>
-            <p id="formMessage" class="form-message"></p>
+            <div class="input-group"><label for="nombre">Nombres y apellidos</label><input type="text" id="nombre" placeholder="Ej. Juan Pérez" required /></div>
+            <div class="input-group"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" placeholder="Ej. 987654321" required /></div>
+            <div class="input-group"><label for="producto">Producto solicitado</label><select id="producto" required><option value="">Selecciona una opción</option><option>Crédito con garantía hipotecaria</option><option>Capital de trabajo</option><option>Crédito para activos</option><option>Crédito de construcción</option><option>Crédito vehicular</option><option>Crédito personal</option><option>Créditos pequeños</option><option>Crédito prendario con joyas</option><option>Crédito prendario con artefactos</option><option>Crédito prendario con vehículo</option><option>Tipo de cambio</option><option>Cartas fianzas</option><option>SOAT</option><option>Venta de terrenos</option></select></div>
+            <div class="two-fields"><div class="input-group"><label for="monto">Monto solicitado</label><input type="text" id="monto" placeholder="S/ 30,000" required /></div><div class="input-group"><label for="plazo">Plazo deseado</label><select id="plazo" required><option value="">Selecciona</option><option>Semanal</option><option>Quincenal</option><option>Mensual</option><option>6 meses</option><option>12 meses</option><option>18 meses</option><option>24 meses</option><option>36 meses</option></select></div></div>
+            <div class="input-group"><label for="distrito">Ciudad / distrito</label><input type="text" id="distrito" placeholder="Ej. Huancayo, Chupaca, Chilca o Lima" required /></div>
+            <label class="check"><input type="checkbox" id="acepta" required /><span>Acepto ser contactado por CrediReal para evaluar mi solicitud.</span></label>
+            <button type="submit" class="main-btn form-submit">Enviar solicitud <span>→</span></button><small class="legal-note">La solicitud está sujeta a evaluación crediticia, documentaria y legal.</small><p id="formMessage" class="form-message"></p>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="section" id="creditos">
-      <div class="container">
-        <div class="section-heading">
-          <span class="pill">Liquidez para avanzar</span>
-          <h2>¿Para qué puedes usar tu crédito?</h2>
-          <p>CrediReal está pensado para personas y negocios que necesitan una solución formal, personalizada y de corto plazo.</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="info-card"><span>💼</span><h3>Capital de trabajo</h3><p>Compra mercadería, atiende pedidos, paga proveedores o refuerza tu operación diaria.</p></article>
-          <article class="info-card"><span>🏗️</span><h3>Construcción</h3><p>Termina una obra, amplía tu vivienda, mejora tu local o avanza con tu proyecto.</p></article>
-          <article class="info-card"><span>📦</span><h3>Mercadería por campaña</h3><p>Prepárate para campañas comerciales con inventario suficiente y mejor flujo.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section soft-section" id="funciona">
-      <div class="container">
-        <div class="section-heading">
-          <span class="pill">Proceso claro</span>
-          <h2>¿Cómo funciona?</h2>
-          <p>Te acompañamos paso a paso con información clara, evaluación responsable y orientación personalizada.</p>
-        </div>
-
-        <div class="steps-grid">
-          <article class="step-card"><b>1</b><h3>Precalifica</h3><p>Elige el monto, plazo y completa tus datos básicos.</p></article>
-          <article class="step-card"><b>2</b><h3>Te contactamos</h3><p>Un asesor revisa tu caso y resuelve tus primeras dudas.</p></article>
-          <article class="step-card"><b>3</b><h3>Evaluamos</h3><p>Analizamos la solicitud, la garantía y la viabilidad del crédito.</p></article>
-          <article class="step-card"><b>4</b><h3>Formalizamos</h3><p>Si calificas, avanzamos con documentos y desembolso.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="requisitos">
-      <div class="container requirements-grid">
-        <div>
-          <span class="pill">Inicio simple</span>
-          <h2>Requisitos básicos para comenzar</h2>
-          <p>Para iniciar la evaluación solo necesitamos información básica. Los documentos se solicitan después, cuando el caso tiene viabilidad preliminar.</p>
-        </div>
-        <ul class="requirements-list">
-          <li>Datos personales y teléfono de contacto.</li>
-          <li>Monto aproximado solicitado.</li>
-          <li>Plazo deseado entre 6 y 36 meses.</li>
-          <li>Distrito donde se ubica el predio.</li>
-          <li>Finalidad del crédito.</li>
-          <li>Información preliminar de la propiedad.</li>
-        </ul>
+    <section class="form-section postula-section" id="postula">
+      <div class="container form-grid">
+        <div class="form-copy"><span class="pill">Talento CrediReal</span><h2>Postula y crece con nosotros</h2><p>Buscamos asesores comerciales, analistas, promotores externos y aliados que quieran construir una red financiera cercana y profesional.</p></div>
+        <div class="form-card"><h3>Formulario de postulación</h3><form id="jobForm"><div class="input-group"><label for="jobName">Nombres y apellidos</label><input type="text" id="jobName" required placeholder="Ej. María Pérez" /></div><div class="input-group"><label for="jobPhone">WhatsApp</label><input type="tel" id="jobPhone" required placeholder="Ej. 987654321" /></div><div class="input-group"><label for="jobRole">Área de interés</label><select id="jobRole" required><option value="">Selecciona</option><option>Asesor comercial</option><option>Analista de crédito</option><option>Promotor externo</option><option>Convenio o alianza comercial</option></select></div><button class="main-btn" type="submit">Enviar postulación <span>→</span></button><p id="jobMessage" class="form-message"></p></form></div>
       </div>
     </section>
 
     <footer class="footer" id="contacto">
       <div class="container footer-grid">
-        <div>
-          <h3>CrediReal</h3>
-          <p>Financiamiento con garantía hipotecaria para personas y negocios que necesitan una solución con respaldo real.</p>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <p>WhatsApp: 988 123 456</p>
-          <p>Correo: hola@credireal.pe</p>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <p>Política de privacidad</p>
-          <p>Términos y condiciones</p>
-          <p>Libro de reclamaciones</p>
-        </div>
+        <div><img src="assets/logo/credireal-logo.svg" alt="CrediReal" class="footer-logo" /><p>Brindamos soluciones financieras con respaldo, cercanía y responsabilidad para impulsar tus sueños y tu negocio.</p><p><b>RUC:</b> 20601234567</p></div>
+        <div><h4>Contáctanos</h4><p>☎ (064) 123 456</p><p>📱 +51 912 345 678</p><p>✉ hola@credireal.com.pe</p><p>🕘 Lun - Vie: 8:30 a.m. - 6:00 p.m.</p></div>
+        <div><h4>Síguenos</h4><div class="footer-social"><a href="https://www.tiktok.com/@bancareal_" target="_blank">♪</a><a href="https://www.facebook.com/BancaRealyCrediReal" target="_blank">f</a><a href="https://www.instagram.com/credirealhuancayo/" target="_blank">◎</a><a href="https://www.youtube.com/@credireal5106" target="_blank">▶</a></div></div>
+        <div><h4>Enlaces útiles</h4><p>Preguntas frecuentes</p><p>Términos y condiciones</p><p>Política de privacidad</p><p>Libro de reclamaciones</p></div>
       </div>
-      <div class="footer-bottom">© 2025 CrediReal. Créditos sujetos a evaluación y aprobación.</div>
+      <div class="footer-bottom">© 2025 CrediReal. Todos los derechos reservados. Diseñado con 💜 en el Perú 🇵🇪</div>
     </footer>
   </main>
-
   <script src="js/main.js"></script>
 </body>
 </html>
