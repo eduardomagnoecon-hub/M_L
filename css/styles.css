@@ -953,3 +953,198 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     transform: translateX(0) translateY(-1px) !important;
   }
 }
+
+
+
+/* =========================================================
+   AJUSTE FINAL 2: CARRUSEL + MEGAMENÚ LIMPIO
+   Punto de partida corregido para CrediReal.
+   - Evita línea atravesando ítems del megamenú.
+   - Ajusta distribución para que el texto no salga del cuadro.
+   - Mantiene el botón "Trabaja con nosotros" suave.
+========================================================= */
+
+/* Evita que la línea decorativa del menú principal se aplique dentro del megamenú */
+.mega-menu .mega-link::after,
+.mega-menu .mega-footer-link::after,
+.nav .mega-menu a::after,
+.nav .mega-menu a:hover::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* El subrayado solo debe aparecer en enlaces principales del header */
+.nav > .nav-link.active::after,
+.nav > .nav-link:hover::after,
+.nav-item:hover > .nav-trigger::after,
+.nav-trigger:hover::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 18px !important;
+  width: 100% !important;
+  height: 3px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--gold-bright), rgba(231, 185, 79, 0.20)) !important;
+}
+
+/* Megamenú de créditos más ancho y mejor distribuido */
+.mega-creditos {
+  width: min(920px, 94vw) !important;
+  padding: 26px 34px 50px !important;
+  grid-template-columns: 1.08fr 0.92fr 1.18fr !important;
+  gap: 24px !important;
+}
+
+/* Separadores internos elegantes sin invadir el contenido */
+.mega-creditos .mega-column {
+  min-width: 0 !important;
+}
+
+.mega-creditos .mega-column:not(:last-child) {
+  border-right: 1px solid rgba(230, 225, 241, 0.95) !important;
+  padding-right: 24px !important;
+}
+
+/* Los enlaces internos no deben heredar reglas del nav principal */
+.mega-menu .mega-link {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 34px minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 12px !important;
+  padding: 10px 8px !important;
+  border-radius: 12px !important;
+  color: var(--primary-dark) !important;
+  white-space: normal !important;
+  overflow: hidden !important;
+}
+
+/* Íconos internos */
+.mega-menu .mega-link > span {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  border-radius: 10px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: var(--primary) !important;
+  border: 1px solid rgba(39, 34, 122, 0.18) !important;
+  background: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+/* Textos del megamenú: permiten salto de línea sin salirse */
+.mega-menu .mega-link div {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.mega-menu .mega-link strong,
+.mega-menu .mega-link b {
+  display: block !important;
+  color: var(--primary-dark) !important;
+  font-size: 13.4px !important;
+  line-height: 1.22 !important;
+  font-weight: 900 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+}
+
+.mega-menu .mega-link small {
+  display: block !important;
+  margin-top: 4px !important;
+  color: #6e6a85 !important;
+  font-size: 11.2px !important;
+  line-height: 1.28 !important;
+  font-weight: 600 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Hover limpio: sin línea cruzada */
+.mega-menu .mega-link:hover {
+  background: #f5f2ff !important;
+  transform: translateX(3px) !important;
+}
+
+/* Botón inferior centrado y sin desbordar */
+.mega-footer-link {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 18px !important;
+  transform: translateX(-50%) !important;
+  color: var(--primary) !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+/* Ajuste para pantallas intermedias */
+@media (min-width: 1151px) and (max-width: 1400px) {
+  .mega-creditos {
+    width: min(860px, 94vw) !important;
+    padding: 24px 28px 48px !important;
+    gap: 20px !important;
+    grid-template-columns: 1.05fr 0.9fr 1.2fr !important;
+  }
+
+  .mega-creditos .mega-column:not(:last-child) {
+    padding-right: 20px !important;
+  }
+
+  .mega-menu .mega-link {
+    gap: 10px !important;
+    padding: 9px 6px !important;
+  }
+
+  .mega-menu .mega-link strong,
+  .mega-menu .mega-link b {
+    font-size: 12.7px !important;
+  }
+
+  .mega-menu .mega-link small {
+    font-size: 10.7px !important;
+  }
+}
+
+/* Ajuste para laptops bajas */
+@media (min-width: 1151px) and (max-height: 820px) {
+  .mega-creditos {
+    width: min(830px, 94vw) !important;
+    padding: 22px 28px 44px !important;
+    gap: 18px !important;
+  }
+
+  .mega-menu .mega-link strong,
+  .mega-menu .mega-link b {
+    font-size: 12.4px !important;
+  }
+
+  .mega-menu .mega-link small {
+    font-size: 10.4px !important;
+  }
+}
+
+/* Responsive: en móvil vuelve a una sola columna */
+@media (max-width: 1150px) {
+  .mega-creditos {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+  }
+
+  .mega-creditos .mega-column:not(:last-child) {
+    border-right: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .mega-footer-link {
+    position: static !important;
+    transform: none !important;
+    display: inline-block !important;
+    margin-top: 12px !important;
+  }
+}

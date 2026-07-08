@@ -14,8 +14,8 @@ let currentSlide = 0;
 
 const phrases = [
   `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`,
-  `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`,
-  `Tu historial crediticio<br>no define todas tus<br><em>oportunidades.</em>`
+  `Cuando tu negocio está listo<br>para crecer, el capital<br><em>no puede esperar.</em>`,
+  `Invierte hoy en la oportunidad<br>que cambiará<br><em>mañana.</em>`
 ];
 
 if (menuBtn && navLinks) {
