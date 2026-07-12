@@ -1148,3 +1148,1135 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     margin-top: 12px !important;
   }
 }
+
+/* =========================================================
+   AJUSTE FINAL 3: MONTO CON ESPACIO VISUAL
+   Permite ver 30 000 en lugar de 30000.
+========================================================= */
+
+.amount-box input#amountInput {
+  letter-spacing: 0.5px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+
+
+/* =========================================================
+   AJUSTE FINAL 4: MENÚS COMERCIALES + AGENCIAS
+========================================================= */
+
+.mega-creditos {
+  width: min(760px, 92vw) !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 30px !important;
+  padding: 28px 34px 52px !important;
+}
+
+.mega-creditos .mega-column:not(:last-child) {
+  border-right: 1px solid rgba(230, 225, 241, 0.95) !important;
+  padding-right: 28px !important;
+}
+
+.mega-rapidas {
+  width: min(680px, 92vw) !important;
+  padding: 26px 32px !important;
+  display: grid !important;
+  grid-template-columns: 1.35fr 1fr !important;
+  gap: 28px !important;
+}
+
+.mega-rapidas .mega-column:not(:last-child) {
+  border-right: 1px solid rgba(230, 225, 241, 0.95) !important;
+  padding-right: 26px !important;
+}
+
+.mega-creditos .mega-link,
+.mega-rapidas .mega-link {
+  grid-template-columns: 34px minmax(0, 1fr) !important;
+}
+
+.mega-creditos .mega-link strong,
+.mega-rapidas .mega-link strong {
+  font-size: 13.2px !important;
+  line-height: 1.24 !important;
+}
+
+.mega-creditos .mega-link small,
+.mega-rapidas .mega-link small {
+  font-size: 11px !important;
+  line-height: 1.32 !important;
+}
+
+.agency-grid {
+  align-items: stretch !important;
+}
+
+.agency-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+}
+
+.agency-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 22px 46px rgba(39, 34, 122, 0.14) !important;
+}
+
+.agency-photo {
+  width: 100% !important;
+  height: 138px !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  background: #f3f1fb !important;
+}
+
+.agency-body {
+  padding: 18px 18px 20px !important;
+}
+
+.agency-body h3 {
+  margin: 0 0 8px !important;
+  color: var(--primary) !important;
+  font-size: 19px !important;
+  line-height: 1.2 !important;
+}
+
+.agency-body p {
+  margin: 0 !important;
+  min-height: 48px !important;
+  color: var(--muted) !important;
+  line-height: 1.45 !important;
+  font-size: 14px !important;
+}
+
+.agency-body a {
+  display: inline-flex !important;
+  margin-top: 14px !important;
+  color: var(--primary) !important;
+  font-weight: 900 !important;
+}
+
+.agency-virtual {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(231,185,79,.20), transparent 30%),
+    linear-gradient(145deg, #ffffff, #f7f4ff) !important;
+}
+
+.agency-virtual-icon {
+  width: 70px !important;
+  height: 70px !important;
+  margin: 24px 18px 0 !important;
+  border-radius: 22px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #ffffff !important;
+  background: linear-gradient(145deg, #3d0b8e, #1d1765) !important;
+  font-size: 34px !important;
+  box-shadow: 0 18px 32px rgba(39,34,122,.20) !important;
+}
+
+@media (min-width: 1151px) and (max-width: 1400px) {
+  .mega-creditos {
+    width: min(720px, 94vw) !important;
+    gap: 24px !important;
+    padding: 26px 30px 50px !important;
+  }
+
+  .mega-rapidas {
+    width: min(650px, 94vw) !important;
+    gap: 22px !important;
+    padding: 24px 28px !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .mega-creditos,
+  .mega-rapidas {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+  }
+
+  .mega-creditos .mega-column:not(:last-child),
+  .mega-rapidas .mega-column:not(:last-child) {
+    border-right: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .agency-photo {
+    height: 170px !important;
+  }
+
+  .agency-body p {
+    min-height: auto !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 5: AGENCIAS CON HORARIOS Y MAPAS
+========================================================= */
+
+.mega-creditos {
+  padding-bottom: 28px !important;
+}
+
+.mega-creditos .mega-footer-link {
+  display: none !important;
+}
+
+.agency-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.agency-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.agency-address {
+  min-height: 42px !important;
+  margin-bottom: 10px !important;
+}
+
+.agency-hours {
+  min-height: 92px !important;
+  margin: 8px 0 14px !important;
+  padding: 12px 13px !important;
+  border-radius: 14px !important;
+  background: #f7f4ff !important;
+  border: 1px solid rgba(230, 225, 241, 0.95) !important;
+  color: var(--primary-dark) !important;
+  font-size: 12.5px !important;
+  line-height: 1.38 !important;
+}
+
+.agency-hours strong {
+  display: block !important;
+  margin-bottom: 5px !important;
+  color: var(--primary) !important;
+  font-size: 12.5px !important;
+  font-weight: 900 !important;
+}
+
+.agency-map {
+  width: 100% !important;
+  height: 118px !important;
+  margin-top: auto !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(230, 225, 241, 0.95) !important;
+  background: #f3f1fb !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+
+.agency-map iframe {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  border: 0 !important;
+}
+
+.agency-virtual {
+  background: #ffffff !important;
+}
+
+.agency-virtual .agency-photo {
+  object-fit: cover !important;
+}
+
+.agency-virtual-box {
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+  padding: 14px !important;
+  color: var(--primary-dark) !important;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(231,185,79,.20), transparent 32%),
+    linear-gradient(145deg, #ffffff, #f7f4ff) !important;
+}
+
+.agency-virtual-box span {
+  font-size: 30px !important;
+  line-height: 1 !important;
+}
+
+.agency-virtual-box strong {
+  display: block !important;
+  margin-top: 6px !important;
+  color: var(--primary) !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+.agency-virtual-box small {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--muted) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 780px) {
+  .agency-hours {
+    min-height: auto !important;
+  }
+
+  .agency-map {
+    height: 150px !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 6: PRODUCTOS DE CRÉDITOS HIPOTECARIOS
+========================================================= */
+
+.agency-attention-image {
+  width: 100% !important;
+  height: 118px !important;
+  margin-top: auto !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(230, 225, 241, 0.95) !important;
+  background: #f3f1fb !important;
+}
+
+.agency-attention-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.credit-products-section {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(231,185,79,.10), transparent 28%),
+    linear-gradient(135deg, #ffffff, #fbf9ff) !important;
+}
+
+.credit-group-title {
+  max-width: 980px !important;
+  margin: 10px auto 24px !important;
+  padding: 0 4px !important;
+}
+
+.credit-group-title.second {
+  margin-top: 52px !important;
+}
+
+.credit-group-title span {
+  display: inline-flex !important;
+  padding: 8px 13px !important;
+  border-radius: 999px !important;
+  background: #f8edd0 !important;
+  color: var(--primary) !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .45px !important;
+}
+
+.credit-group-title h3 {
+  margin: 12px 0 0 !important;
+  color: var(--primary-dark) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(26px, 2.3vw, 36px) !important;
+  font-weight: 500 !important;
+  line-height: 1.08 !important;
+}
+
+.credit-product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+.credit-product-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: transform .22s ease, box-shadow .22s ease !important;
+}
+
+.credit-product-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 24px 52px rgba(39,34,122,.15) !important;
+}
+
+.credit-product-image {
+  height: 168px !important;
+  background: #f3f1fb !important;
+  overflow: hidden !important;
+}
+
+.credit-product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.credit-product-body {
+  padding: 22px 22px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.product-badge {
+  align-self: flex-start !important;
+  padding: 7px 11px !important;
+  border-radius: 999px !important;
+  background: #f8edd0 !important;
+  color: var(--primary) !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .4px !important;
+}
+
+.credit-product-body h3 {
+  margin: 12px 0 8px !important;
+  color: var(--primary) !important;
+  font-size: 24px !important;
+  line-height: 1.12 !important;
+}
+
+.credit-product-body p {
+  margin: 0 0 16px !important;
+  color: var(--muted) !important;
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+}
+
+.product-data {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+  margin: 0 0 16px !important;
+}
+
+.product-data div {
+  display: grid !important;
+  grid-template-columns: 115px 1fr !important;
+  gap: 10px !important;
+  padding: 10px 12px !important;
+  border-radius: 14px !important;
+  background: #f7f4ff !important;
+  border: 1px solid rgba(230, 225, 241, 0.95) !important;
+}
+
+.product-data strong {
+  color: var(--primary) !important;
+  font-size: 12.5px !important;
+  font-weight: 900 !important;
+}
+
+.product-data span {
+  color: var(--primary-dark) !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+}
+
+.credit-product-body h4 {
+  margin: 2px 0 8px !important;
+  color: var(--primary-dark) !important;
+  font-size: 14px !important;
+}
+
+.credit-product-body ul {
+  margin: 0 0 18px !important;
+  padding-left: 18px !important;
+  color: var(--text) !important;
+  display: grid !important;
+  gap: 6px !important;
+  font-size: 13.5px !important;
+  line-height: 1.42 !important;
+}
+
+.credit-product-body .outline-btn {
+  margin-top: auto !important;
+  width: 100% !important;
+}
+
+@media (max-width: 1150px) {
+  .credit-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .agency-attention-image {
+    height: 150px !important;
+  }
+
+  .credit-product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .credit-product-image {
+    height: 190px !important;
+  }
+
+  .product-data div {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 7: SOLUCIONES, INSTRUMENTOS E INMOBILIARIA
+========================================================= */
+
+.quick-product-grid, .instrument-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+.quick-product-card, .instrument-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: transform .22s ease, box-shadow .22s ease !important;
+}
+.quick-product-card:hover, .instrument-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 24px 52px rgba(39,34,122,.15) !important;
+}
+.quick-product-image, .instrument-image {
+  height: 172px !important;
+  background: #f3f1fb !important;
+  overflow: hidden !important;
+}
+.quick-product-image img, .instrument-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+.quick-product-body, .instrument-body {
+  padding: 22px 22px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+.quick-product-body h3, .instrument-body h3 {
+  margin: 12px 0 8px !important;
+  color: var(--primary) !important;
+  font-size: 23px !important;
+  line-height: 1.12 !important;
+}
+.quick-product-body p, .instrument-body p {
+  margin: 0 0 16px !important;
+  color: var(--muted) !important;
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+}
+.quick-product-body h4, .instrument-body h4 {
+  margin: 4px 0 8px !important;
+  color: var(--primary-dark) !important;
+  font-size: 14px !important;
+}
+.quick-product-body ul, .instrument-body ul {
+  margin: 0 0 16px !important;
+  padding-left: 18px !important;
+  display: grid !important;
+  gap: 6px !important;
+  color: var(--text) !important;
+  font-size: 13.5px !important;
+  line-height: 1.42 !important;
+}
+.quick-product-body .outline-btn, .instrument-body .outline-btn {
+  margin-top: auto !important;
+  width: 100% !important;
+}
+
+.microcredit-panel {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: .9fr 1.1fr !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+.microcredit-copy {
+  padding: 32px !important;
+  border-radius: 26px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+.microcredit-copy h3 {
+  margin: 0 0 12px !important;
+  color: var(--primary-dark) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(28px, 2.3vw, 38px) !important;
+  font-weight: 500 !important;
+  line-height: 1.05 !important;
+}
+.microcredit-copy p {
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+}
+.micro-benefits, .real-estate-benefits {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+  margin: 20px 0 !important;
+}
+.micro-benefits div, .real-estate-benefits div {
+  padding: 12px 13px !important;
+  border-radius: 14px !important;
+  background: #f7f4ff !important;
+  border: 1px solid rgba(230,225,241,.95) !important;
+}
+.micro-benefits strong, .real-estate-benefits strong {
+  display: block !important;
+  color: var(--primary) !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+.micro-benefits span, .real-estate-benefits span {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--primary-dark) !important;
+  font-size: 12.5px !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+}
+.microcredit-copy ul {
+  margin: 0 0 20px !important;
+  padding-left: 18px !important;
+  display: grid !important;
+  gap: 8px !important;
+  color: var(--text) !important;
+}
+.micro-btn { width: 100% !important; }
+.microcredit-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+}
+.microcredit-gallery img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 22px !important;
+  box-shadow: var(--shadow-soft) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.partner-logo {
+  width: 130px !important;
+  min-height: 42px !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.partner-logo img {
+  max-width: 100% !important;
+  max-height: 52px !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+.real-estate-panel {
+  display: grid !important;
+  grid-template-columns: .92fr 1.08fr !important;
+  gap: 34px !important;
+  align-items: center !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+.real-estate-copy {
+  padding: 36px !important;
+  border-radius: 28px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+.sumaq-logo {
+  width: 180px !important;
+  margin-bottom: 14px !important;
+}
+.real-estate-copy h2 {
+  margin: 14px 0 12px !important;
+  color: var(--primary-dark) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(34px, 3vw, 48px) !important;
+  font-weight: 500 !important;
+  line-height: 1.05 !important;
+}
+.real-estate-copy p {
+  color: var(--muted) !important;
+  line-height: 1.7 !important;
+  font-size: 16px !important;
+}
+.real-estate-media {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+.real-estate-media img {
+  width: 100% !important;
+  height: 520px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 26px !important;
+  box-shadow: var(--shadow-card) !important;
+  border: 1px solid var(--border) !important;
+  background: #ffffff !important;
+}
+.real-estate-promo {
+  object-fit: contain !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 1150px) {
+  .quick-product-grid, .instrument-grid, .microcredit-panel, .real-estate-panel {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .real-estate-media {
+    grid-template-columns: 1fr !important;
+  }
+  .real-estate-media img {
+    height: 420px !important;
+  }
+}
+@media (max-width: 780px) {
+  .quick-product-grid, .instrument-grid, .microcredit-panel, .real-estate-panel, .micro-benefits, .real-estate-benefits, .microcredit-gallery {
+    grid-template-columns: 1fr !important;
+  }
+  .microcredit-gallery img {
+    height: 220px !important;
+  }
+  .real-estate-copy {
+    padding: 26px !important;
+  }
+  .real-estate-media img {
+    height: auto !important;
+    min-height: 280px !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 8: SUMAQ REAL - PROMOCIÓN PRINCIPAL
+   - sumac_p.jpg queda como imagen principal grande.
+   - 35.png queda dentro del cuadro izquierdo.
+   - Botón cambia a asesor inmobiliario.
+========================================================= */
+
+.real-estate-panel-featured {
+  grid-template-columns: 0.86fr 1.14fr !important;
+  gap: 32px !important;
+  align-items: stretch !important;
+}
+
+.real-estate-panel-featured .real-estate-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.real-estate-inline-image {
+  width: 100% !important;
+  height: 185px !important;
+  margin: 18px 0 8px !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-soft) !important;
+  background: #f3f1fb !important;
+}
+
+.real-estate-inline-image img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.real-estate-promo-main {
+  display: block !important;
+  height: 100% !important;
+}
+
+.real-estate-promo-main .real-estate-promo {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 720px !important;
+  max-height: 820px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #ffffff !important;
+  padding: 10px !important;
+  border-radius: 30px !important;
+}
+
+.real-estate-panel-featured .gold-btn {
+  margin-top: auto !important;
+  text-align: center !important;
+}
+
+@media (max-width: 1150px) {
+  .real-estate-panel-featured {
+    grid-template-columns: 1fr !important;
+  }
+
+  .real-estate-promo-main .real-estate-promo {
+    min-height: auto !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .real-estate-inline-image {
+    height: 210px !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 9: SUMAQ REAL - PUBLICIDAD GRANDE
+   Reestructura inmobiliaria para que sumac_p.jpg sea protagonista.
+========================================================= */
+
+.real-estate-section {
+  overflow: hidden !important;
+}
+
+.real-estate-header {
+  max-width: 920px !important;
+  margin: 0 auto 30px !important;
+  text-align: center !important;
+}
+
+.real-estate-header .sumaq-logo {
+  width: 190px !important;
+  min-height: 58px !important;
+  margin: 0 auto 14px !important;
+  justify-content: center !important;
+}
+
+.real-estate-header h2 {
+  margin: 14px 0 12px !important;
+  color: var(--primary-dark) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(36px, 3.4vw, 54px) !important;
+  font-weight: 500 !important;
+  line-height: 1.04 !important;
+}
+
+.real-estate-header p {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  color: var(--muted) !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+.real-estate-feature-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 2fr) minmax(330px, .9fr) !important;
+  gap: 26px !important;
+  align-items: stretch !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+.real-estate-main-ad {
+  min-height: 700px !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 14px !important;
+}
+
+.real-estate-main-ad img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 780px !important;
+  display: block !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.real-estate-side-card {
+  border-radius: 32px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.real-estate-agent-photo {
+  width: 100% !important;
+  height: 270px !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  background: #f3f1fb !important;
+}
+
+.real-estate-side-content {
+  padding: 26px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.real-estate-side-content h3 {
+  margin: 0 0 10px !important;
+  color: var(--primary) !important;
+  font-size: 25px !important;
+  line-height: 1.12 !important;
+}
+
+.real-estate-side-content p {
+  margin: 0 0 16px !important;
+  color: var(--muted) !important;
+  line-height: 1.6 !important;
+  font-size: 15px !important;
+}
+
+.real-estate-side-content .real-estate-benefits {
+  grid-template-columns: 1fr !important;
+  gap: 10px !important;
+  margin: 10px 0 20px !important;
+}
+
+.real-estate-side-content .gold-btn {
+  margin-top: auto !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  text-align: center !important;
+}
+
+@media (max-width: 1150px) {
+  .real-estate-feature-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .real-estate-main-ad {
+    min-height: auto !important;
+  }
+
+  .real-estate-main-ad img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .real-estate-agent-photo {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .real-estate-header {
+    text-align: left !important;
+  }
+
+  .real-estate-header .sumaq-logo {
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .real-estate-main-ad {
+    border-radius: 22px !important;
+    padding: 8px !important;
+  }
+
+  .real-estate-side-card {
+    border-radius: 22px !important;
+  }
+
+  .real-estate-agent-photo {
+    height: 240px !important;
+  }
+
+  .real-estate-side-content {
+    padding: 22px !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL 10: LINK INMOBILIARIA + LOGO SUMAQ REAL
+   - El menú Inmobiliaria lleva directo a la sección SUMAQ REAL.
+   - Logo SUMAQ REAL más grande.
+========================================================= */
+
+.real-estate-header .sumaq-logo,
+.sumaq-logo {
+  width: 570px !important;
+  max-width: min(570px, 96%) !important;
+  min-height: 150px !important;
+}
+
+.real-estate-header .sumaq-logo img,
+.sumaq-logo img {
+  width: 100% !important;
+  max-width: 100% !important;
+  max-height: 160px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 780px) {
+  .real-estate-header .sumaq-logo,
+  .sumaq-logo {
+    width: 100% !important;
+    max-width: 360px !important;
+    min-height: 100px !important;
+  }
+
+  .real-estate-header .sumaq-logo img,
+  .sumaq-logo img {
+    max-height: 110px !important;
+  }
+}
+
+
+
+/* =========================================================
+   AJUSTE FINAL 11: RETIRAR BLOQUE DE SOLUCIONES
+   Se eliminó del HTML la sección con:
+   - "Elige la solución que necesitas"
+   - Las 4 tarjetas de soluciones
+========================================================= */
+
+.solutions-section,
+.solutions-overview {
+  display: none !important;
+}
+
+
+
+/* =========================================================
+   AJUSTE FINAL 12: VIDEOS DE FACEBOOK EN ACTUALIDAD
+   Reproductores embebidos dentro de la página.
+========================================================= */
+
+.video-section {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(231,185,79,.10), transparent 30%),
+    linear-gradient(135deg, #ffffff, #fbf9ff) !important;
+}
+
+.video-news-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+.video-news-card {
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: transform .22s ease, box-shadow .22s ease !important;
+}
+
+.video-news-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 24px 52px rgba(39,34,122,.15) !important;
+}
+
+.facebook-video-frame {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  background: #f3f1fb !important;
+  overflow: hidden !important;
+}
+
+.facebook-video-frame iframe {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  border: 0 !important;
+}
+
+.video-news-body {
+  padding: 20px 22px 24px !important;
+}
+
+.video-news-body small {
+  display: inline-flex !important;
+  margin-bottom: 10px !important;
+  padding: 7px 11px !important;
+  border-radius: 999px !important;
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .4px !important;
+}
+
+.video-news-body h3 {
+  margin: 0 0 8px !important;
+  color: var(--primary) !important;
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+}
+
+.video-news-body p {
+  margin: 0 !important;
+  color: var(--muted) !important;
+  line-height: 1.55 !important;
+  font-size: 14.5px !important;
+}
+
+@media (max-width: 1150px) {
+  .video-news-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .video-news-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -40,31 +40,56 @@ function changeSlide() {
 }
 if (slides.length > 0) setInterval(changeSlide, 6000);
 
+function parseAmount(value) {
+  return Number(String(value).replace(/\D/g, ""));
+}
+
+function formatPlainAmount(value) {
+  return new Intl.NumberFormat("es-PE", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(Number(value)).replace(/,/g, " ");
+}
+
 function formatAmount(value) {
-  return new Intl.NumberFormat("es-PE", { style: "currency", currency: "PEN", minimumFractionDigits: 0 }).format(value);
+  return `S/ ${formatPlainAmount(value)}`;
 }
 
 function syncAmount(source) {
   if (!amountInput || !amountRange) return;
-  let amount = Number(source.value);
-  const min = Number(amountInput.min);
-  const max = Number(amountInput.max);
-  if (amount < min) amount = min;
+
+  let amount = source === amountRange
+    ? Number(amountRange.value)
+    : parseAmount(amountInput.value);
+
+  const min = Number(amountInput.dataset.min || amountRange.min || 20000);
+  const max = Number(amountInput.dataset.max || amountRange.max || 500000);
+
+  if (!amount || amount < min) amount = min;
   if (amount > max) amount = max;
-  amountInput.value = amount;
+
+  amountInput.value = formatPlainAmount(amount);
   amountRange.value = amount;
 }
 
 if (amountInput && amountRange) {
   amountRange.addEventListener("input", () => syncAmount(amountRange));
-  amountInput.addEventListener("input", () => syncAmount(amountInput));
+
+  amountInput.addEventListener("input", () => {
+    const cleanAmount = parseAmount(amountInput.value);
+    amountInput.value = cleanAmount ? formatPlainAmount(cleanAmount) : "";
+  });
+
+  amountInput.addEventListener("blur", () => syncAmount(amountInput));
+
+  syncAmount(amountRange);
 }
 
 if (precalificaHero) {
   precalificaHero.addEventListener("click", () => {
     const montoForm = document.getElementById("monto");
     const plazoForm = document.getElementById("plazo");
-    if (montoForm && amountInput) montoForm.value = formatAmount(Number(amountInput.value));
+    if (montoForm && amountInput) montoForm.value = formatAmount(parseAmount(amountInput.value));
     if (plazoForm && termSelect) plazoForm.value = `${termSelect.value} meses`;
   });
 }
