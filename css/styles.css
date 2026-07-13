@@ -3975,3 +3975,300 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     line-height: 1.35 !important;
   }
 }
+
+
+
+/* =========================================================
+   AJUSTE FINAL 18: MENÚ MÓVIL REPARADO Y LIMPIO
+   Solución definitiva: menú hamburguesa funcional,
+   cabecera fija y submenús desplegados hacia abajo.
+========================================================= */
+
+@media (max-width: 1150px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  body.mobile-menu-open {
+    overflow: hidden !important;
+  }
+
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 76px !important;
+    min-height: 76px !important;
+    z-index: 99999 !important;
+    overflow: visible !important;
+  }
+
+  body {
+    padding-top: 76px !important;
+  }
+
+  .header-container {
+    height: 76px !important;
+    min-height: 76px !important;
+    max-height: 76px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    overflow: visible !important;
+  }
+
+  .menu-btn {
+    display: grid !important;
+    place-items: center !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    z-index: 100002 !important;
+  }
+
+  /* Panel principal cerrado */
+  .header .nav#navLinks {
+    display: none !important;
+    position: fixed !important;
+    top: 88px !important;
+    left: 14px !important;
+    right: 14px !important;
+    width: auto !important;
+    max-width: calc(100vw - 28px) !important;
+    max-height: calc(100dvh - 104px) !important;
+    margin: 0 !important;
+    padding: 14px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    box-sizing: border-box !important;
+    border-radius: 26px !important;
+    background: rgba(255,255,255,.985) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow: 0 28px 80px rgba(39,34,122,.25) !important;
+    z-index: 100000 !important;
+    transform: none !important;
+  }
+
+  /* Panel principal abierto */
+  .header .nav#navLinks.active {
+    display: flex !important;
+  }
+
+  .header .nav#navLinks::before {
+    content: "" !important;
+    position: fixed !important;
+    inset: 76px 0 0 0 !important;
+    background: rgba(22,17,79,.12) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+    z-index: -1 !important;
+  }
+
+  .header .nav#navLinks > a,
+  .header .nav#navLinks > .nav-item,
+  .header .nav#navLinks > .has-mega {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .header .nav#navLinks .nav-item,
+  .header .nav#navLinks .has-mega {
+    display: block !important;
+    height: auto !important;
+    position: relative !important;
+    overflow: visible !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .header .nav#navLinks .nav-link,
+  .header .nav#navLinks .nav-trigger,
+  .header .nav#navLinks a,
+  .header .nav#navLinks button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 52px !important;
+    padding: 14px 16px !important;
+    margin: 0 !important;
+    border-radius: 19px !important;
+    text-align: left !important;
+    color: var(--primary-dark) !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow: 0 8px 18px rgba(39,34,122,.055) !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    transform: none !important;
+    white-space: normal !important;
+  }
+
+  .header .nav#navLinks .nav-trigger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .header .nav#navLinks .nav-trigger span {
+    transition: transform .18s ease !important;
+  }
+
+  .header .nav#navLinks .has-mega.open > .nav-trigger {
+    background: linear-gradient(145deg, rgba(248,237,208,.96), rgba(255,255,255,.98)) !important;
+    border-color: rgba(201,150,42,.42) !important;
+    box-shadow: 0 10px 24px rgba(201,150,42,.14) !important;
+    color: var(--primary) !important;
+  }
+
+  .header .nav#navLinks .has-mega.open > .nav-trigger span {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Submenú cerrado */
+  .header .nav#navLinks .has-mega > .mega-menu {
+    display: none !important;
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 10px 0 0 0 !important;
+    padding: 14px !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    translate: 0 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    border-radius: 22px !important;
+    background:
+      radial-gradient(circle at 96% 8%, rgba(231,185,79,.16), transparent 32%),
+      linear-gradient(145deg, #ffffff 0%, #fbf9ff 100%) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.98),
+      0 14px 30px rgba(39,34,122,.10) !important;
+  }
+
+  /* Submenú abierto */
+  .header .nav#navLinks .has-mega.open > .mega-menu {
+    display: grid !important;
+  }
+
+  .header .nav#navLinks .mega-menu::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .header .nav#navLinks .mega-column {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .header .nav#navLinks .mega-column + .mega-column {
+    margin-top: 14px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(230,225,241,.95) !important;
+  }
+
+  .header .nav#navLinks .mega-column h4 {
+    margin: 0 0 12px !important;
+    padding: 0 4px !important;
+    color: var(--primary-dark) !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    font-weight: 900 !important;
+  }
+
+  .header .nav#navLinks .mega-link {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    padding: 13px 12px !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow: 0 8px 18px rgba(39,34,122,.055) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  .header .nav#navLinks .mega-link:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .header .nav#navLinks .mega-link > span {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    border-radius: 14px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: #f7f4ff !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(39,34,122,.12) !important;
+  }
+
+  .header .nav#navLinks .mega-link div {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .header .nav#navLinks .mega-link strong,
+  .header .nav#navLinks .mega-link b {
+    display: block !important;
+    color: var(--primary-dark) !important;
+    font-size: 14.2px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .header .nav#navLinks .mega-link small {
+    display: block !important;
+    margin-top: 4px !important;
+    color: var(--muted) !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .header .nav#navLinks {
+    top: 84px !important;
+    max-height: calc(100dvh - 98px) !important;
+  }
+}
