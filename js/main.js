@@ -186,3 +186,18 @@ document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
     }
   });
 });
+
+
+// Ajuste móvil final: al abrir un submenú, mantenerlo dentro del panel vertical
+document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (window.innerWidth <= 1150) {
+      setTimeout(() => {
+        const currentItem = trigger.closest(".has-mega");
+        if (currentItem && currentItem.classList.contains("open")) {
+          currentItem.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }, 80);
+    }
+  });
+});
