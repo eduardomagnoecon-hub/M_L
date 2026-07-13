@@ -201,3 +201,17 @@ document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
     }
   });
 });
+
+
+
+// Ajuste final 16: evitar desplazamiento lateral al abrir submenús móviles
+document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (window.innerWidth <= 1150) {
+      setTimeout(() => {
+        window.scrollTo({ left: 0, top: window.scrollY, behavior: "instant" });
+        if (navLinks) navLinks.scrollLeft = 0;
+      }, 40);
+    }
+  });
+});

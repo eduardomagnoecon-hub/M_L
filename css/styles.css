@@ -3542,3 +3542,279 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     flex-basis: 134px !important;
   }
 }
+
+
+
+/* =========================================================
+   AJUSTE FINAL 16: SUBMENÚS MÓVILES 100% VERTICALES
+   Corrige definitivamente el desplazamiento lateral.
+   Los submenús se abren dentro del panel, hacia abajo,
+   con sombras y fondo diferenciado.
+========================================================= */
+
+@media (max-width: 1150px) {
+  /* El panel móvil nunca debe generar desplazamiento horizontal */
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .header,
+  .header-container,
+  .nav,
+  .nav.active {
+    overflow-x: hidden !important;
+  }
+
+  .nav.active {
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-width: calc(100vw - 24px) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Cada item del menú será un bloque vertical */
+  .header .nav .nav-item,
+  .header .nav .has-mega {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* Botones principales del menú */
+  .header .nav .nav-link,
+  .header .nav .nav-trigger,
+  .header .nav > a,
+  .header .nav button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+  }
+
+  /* Regla de máxima prioridad para todos los megamenús */
+  .header .nav .nav-item > .mega-menu,
+  .header .nav .has-mega > .mega-menu,
+  .header .nav .nav-item > .mega-menu.mega-creditos,
+  .header .nav .nav-item > .mega-menu.mega-rapidas,
+  .header .nav .nav-item > .mega-menu.mega-small,
+  .header .nav .has-mega > .mega-menu.mega-creditos,
+  .header .nav .has-mega > .mega-menu.mega-rapidas,
+  .header .nav .has-mega > .mega-menu.mega-small {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    display: none !important;
+    float: none !important;
+    clear: both !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 10px 0 0 0 !important;
+    padding: 14px !important;
+
+    transform: translateX(0) translateY(0) !important;
+    translate: 0 0 !important;
+
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+    border-radius: 22px !important;
+    background:
+      radial-gradient(circle at 96% 8%, rgba(231,185,79,.16), transparent 32%),
+      linear-gradient(145deg, #ffffff 0%, #fbf9ff 100%) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.98),
+      0 14px 30px rgba(39,34,122,.10) !important;
+  }
+
+  .header .nav .nav-item.open > .mega-menu,
+  .header .nav .has-mega.open > .mega-menu,
+  .header .nav .nav-item.open > .mega-menu.mega-creditos,
+  .header .nav .nav-item.open > .mega-menu.mega-rapidas,
+  .header .nav .nav-item.open > .mega-menu.mega-small,
+  .header .nav .has-mega.open > .mega-menu.mega-creditos,
+  .header .nav .has-mega.open > .mega-menu.mega-rapidas,
+  .header .nav .has-mega.open > .mega-menu.mega-small {
+    display: grid !important;
+  }
+
+  .header .nav .mega-menu::before,
+  .header .nav .mega-creditos::before,
+  .header .nav .mega-rapidas::before,
+  .header .nav .mega-small::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Columnas internas: siempre una debajo de otra */
+  .header .nav .mega-menu .mega-column,
+  .header .nav .mega-creditos .mega-column,
+  .header .nav .mega-rapidas .mega-column,
+  .header .nav .mega-small .mega-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  .header .nav .mega-menu .mega-column + .mega-column {
+    margin-top: 14px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(230,225,241,.95) !important;
+  }
+
+  .header .nav .mega-column h4 {
+    margin: 0 0 12px !important;
+    padding: 0 4px !important;
+    color: var(--primary-dark) !important;
+    font-size: 15px !important;
+    font-weight: 900 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+  }
+
+  /* Subopciones: tarjetas internas claras */
+  .header .nav .mega-menu .mega-link,
+  .header .nav .mega-creditos .mega-link,
+  .header .nav .mega-rapidas .mega-link,
+  .header .nav .mega-small .mega-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    margin: 0 0 10px 0 !important;
+    padding: 13px 12px !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    translate: 0 0 !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow: 0 8px 18px rgba(39,34,122,.055) !important;
+  }
+
+  .header .nav .mega-menu .mega-link:last-child,
+  .header .nav .mega-creditos .mega-link:last-child,
+  .header .nav .mega-rapidas .mega-link:last-child,
+  .header .nav .mega-small .mega-link:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .header .nav .mega-menu .mega-link:hover,
+  .header .nav .mega-creditos .mega-link:hover,
+  .header .nav .mega-rapidas .mega-link:hover,
+  .header .nav .mega-small .mega-link:hover {
+    transform: none !important;
+    background: #f5f2ff !important;
+  }
+
+  .header .nav .mega-link > span {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    border-radius: 14px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: #f7f4ff !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(39,34,122,.12) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9) !important;
+  }
+
+  .header .nav .mega-link div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .header .nav .mega-link strong,
+  .header .nav .mega-link b {
+    display: block !important;
+    color: var(--primary-dark) !important;
+    font-size: 14.2px !important;
+    line-height: 1.25 !important;
+    font-weight: 900 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    text-align: left !important;
+  }
+
+  .header .nav .mega-link small {
+    display: block !important;
+    margin-top: 4px !important;
+    color: var(--muted) !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    text-align: left !important;
+  }
+
+  /* Sombra especial para distinguir menú principal de submenú */
+  .header .nav .has-mega.open {
+    padding: 0 !important;
+    border-radius: 20px !important;
+  }
+
+  .header .nav .has-mega.open > .nav-trigger {
+    background:
+      linear-gradient(145deg, rgba(248,237,208,.90), rgba(255,255,255,.96)) !important;
+    border-color: rgba(201,150,42,.35) !important;
+    box-shadow: 0 10px 24px rgba(201,150,42,.14) !important;
+  }
+}
+
+/* Refuerzo específico para celulares angostos */
+@media (max-width: 430px) {
+  .header .nav .nav-item > .mega-menu,
+  .header .nav .has-mega > .mega-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
