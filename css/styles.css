@@ -2280,3 +2280,579 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =========================================================
+   AJUSTE FINAL 13: OPTIMIZACIÓN MÓVIL CREDIREAL
+   Mejora lectura, navegación y conversión en celular.
+   No altera el diseño aprobado de escritorio.
+========================================================= */
+
+@media (max-width: 780px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    background: #fbf9ff !important;
+  }
+
+  .container {
+    width: min(100% - 28px, 100%) !important;
+  }
+
+  .header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 3000 !important;
+    background: rgba(255,255,255,.98) !important;
+  }
+
+  .header-container {
+    width: min(100% - 20px, 100%) !important;
+    min-height: 64px !important;
+    padding: 8px 0 !important;
+    gap: 8px !important;
+  }
+
+  .logo-brand {
+    height: 48px !important;
+    max-width: calc(100% - 52px) !important;
+    overflow: hidden !important;
+  }
+
+  .brand-logo {
+    width: 108px !important;
+    height: 48px !important;
+    flex-basis: 108px !important;
+  }
+
+  .brand-slogan {
+    font-size: 12.5px !important;
+    max-width: 155px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .menu-btn {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 14px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: #f3f1fb !important;
+    border: 1px solid rgba(39,34,122,.12) !important;
+    font-size: 25px !important;
+  }
+
+  .nav {
+    max-height: calc(100vh - 74px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    padding: 12px 0 18px !important;
+    gap: 10px !important;
+  }
+
+  .nav-link,
+  .nav-trigger,
+  .nav a,
+  .nav button {
+    min-height: 44px !important;
+    padding: 13px 14px !important;
+    border-radius: 14px !important;
+    background: rgba(255,255,255,.82) !important;
+    border: 1px solid rgba(230,225,241,.95) !important;
+  }
+
+  .nav-link.active::after,
+  .nav-link:hover::after,
+  .nav-trigger:hover::after,
+  .nav-item:hover > .nav-trigger::after,
+  .nav a.active::after,
+  .nav a:hover::after {
+    display: none !important;
+  }
+
+  .nav-trigger {
+    justify-content: space-between !important;
+  }
+
+  .mega-menu,
+  .mega-creditos,
+  .mega-rapidas,
+  .mega-small {
+    padding: 12px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(230,225,241,.95) !important;
+  }
+
+  .mega-column h4 {
+    font-size: 13px !important;
+    margin: 4px 0 10px !important;
+  }
+
+  .mega-link {
+    grid-template-columns: 32px 1fr !important;
+    gap: 10px !important;
+    padding: 10px 8px !important;
+  }
+
+  .mega-link strong,
+  .mega-link b {
+    font-size: 13px !important;
+  }
+
+  .mega-link small {
+    font-size: 11px !important;
+  }
+
+  .work-header-btn,
+  .nav-cta {
+    width: 100% !important;
+    min-height: 46px !important;
+    border-radius: 14px !important;
+    margin-top: 4px !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .hero-photo {
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    border-bottom-right-radius: 28px !important;
+    border-bottom-left-radius: 28px !important;
+  }
+
+  .photo-message {
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 96px !important;
+  }
+
+  .photo-message h2 {
+    font-size: clamp(30px, 9vw, 39px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.8px !important;
+  }
+
+  .gold-line {
+    width: 48px !important;
+    margin-bottom: 13px !important;
+  }
+
+  .social-icons {
+    left: 22px !important;
+    bottom: 28px !important;
+    gap: 10px !important;
+  }
+
+  .social {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 19px !important;
+  }
+
+  .hero-content {
+    padding: 28px 18px 22px !important;
+    min-height: auto !important;
+    max-height: none !important;
+    align-items: stretch !important;
+  }
+
+  .hero-title-area h1 {
+    white-space: normal !important;
+    font-size: clamp(34px, 10vw, 44px) !important;
+    line-height: 1 !important;
+    text-align: left !important;
+  }
+
+  .hero-boxes {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    margin-top: 28px !important;
+    align-items: stretch !important;
+  }
+
+  .request-card,
+  .advisor-card {
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 24px !important;
+  }
+
+  .request-card {
+    padding: 18px 17px 15px !important;
+    animation: none !important;
+  }
+
+  .request-title h3 {
+    font-size: 24px !important;
+  }
+
+  .amount-box input {
+    font-size: 23px !important;
+  }
+
+  .main-btn {
+    min-height: 52px !important;
+    font-size: 16px !important;
+  }
+
+  .advisor-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 16px !important;
+    animation: none !important;
+  }
+
+  .whatsapp-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .trust-strip {
+    width: min(100% - 24px, 100%) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    padding: 16px 0 24px !important;
+    margin: 0 auto !important;
+  }
+
+  .trust-card {
+    height: auto !important;
+    min-height: 58px !important;
+    padding: 8px 8px !important;
+    gap: 6px !important;
+  }
+
+  .trust-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+  }
+
+  .trust-icon svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .trust-card span {
+    display: none !important;
+  }
+
+  .trust-card p {
+    font-size: 11.2px !important;
+    line-height: 1.15 !important;
+  }
+
+  .detail-section,
+  .news-section,
+  .agency-section,
+  .form-section {
+    padding: 46px 0 !important;
+  }
+
+  .section-title {
+    margin-bottom: 24px !important;
+  }
+
+  .section-title.centered {
+    text-align: left !important;
+  }
+
+  .section-title h2,
+  .form-copy h2,
+  .real-estate-header h2 {
+    font-size: clamp(30px, 9vw, 38px) !important;
+    line-height: 1.07 !important;
+  }
+
+  .section-title p,
+  .form-copy p,
+  .real-estate-header p {
+    font-size: 15.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .eyebrow,
+  .pill,
+  .product-badge {
+    font-size: 10.5px !important;
+    padding: 8px 11px !important;
+  }
+
+  .credit-product-grid,
+  .quick-product-grid,
+  .instrument-grid,
+  .video-news-grid,
+  .agency-grid,
+  .form-grid,
+  .footer-grid,
+  .microcredit-panel,
+  .real-estate-feature-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .credit-group-title {
+    margin: 8px auto 18px !important;
+  }
+
+  .credit-group-title.second {
+    margin-top: 38px !important;
+  }
+
+  .credit-group-title h3 {
+    font-size: clamp(25px, 7.5vw, 32px) !important;
+  }
+
+  .credit-product-card,
+  .quick-product-card,
+  .instrument-card,
+  .video-news-card,
+  .agency-card {
+    border-radius: 22px !important;
+  }
+
+  .credit-product-image,
+  .quick-product-image,
+  .instrument-image {
+    height: 190px !important;
+  }
+
+  .credit-product-body,
+  .quick-product-body,
+  .instrument-body,
+  .video-news-body {
+    padding: 20px !important;
+  }
+
+  .credit-product-body h3,
+  .quick-product-body h3,
+  .instrument-body h3,
+  .video-news-body h3 {
+    font-size: 22px !important;
+  }
+
+  .product-data div {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+
+  .microcredit-copy {
+    padding: 24px 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .micro-benefits,
+  .real-estate-benefits,
+  .microcredit-gallery {
+    grid-template-columns: 1fr !important;
+  }
+
+  .microcredit-gallery img {
+    height: 210px !important;
+  }
+
+  .real-estate-header {
+    text-align: left !important;
+    margin-bottom: 22px !important;
+  }
+
+  .real-estate-header .sumaq-logo,
+  .sumaq-logo {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 86px !important;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .real-estate-header .sumaq-logo img,
+  .sumaq-logo img {
+    max-height: 94px !important;
+  }
+
+  .real-estate-main-ad {
+    min-height: auto !important;
+    border-radius: 22px !important;
+    padding: 8px !important;
+  }
+
+  .real-estate-main-ad img {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .real-estate-side-card {
+    border-radius: 22px !important;
+  }
+
+  .real-estate-agent-photo {
+    height: 230px !important;
+  }
+
+  .real-estate-side-content {
+    padding: 20px !important;
+  }
+
+  .real-estate-side-content h3 {
+    font-size: 23px !important;
+  }
+
+  .facebook-video-frame {
+    aspect-ratio: 9 / 14 !important;
+    min-height: 420px !important;
+  }
+
+  .agency-photo {
+    height: 180px !important;
+  }
+
+  .agency-map,
+  .agency-attention-image {
+    height: 150px !important;
+  }
+
+  .agency-hours {
+    min-height: auto !important;
+    font-size: 12.3px !important;
+  }
+
+  .work-banner {
+    padding: 36px 0 !important;
+  }
+
+  .work-inner {
+    padding: 26px 20px !important;
+    border-radius: 22px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .work-inner h2 {
+    font-size: 34px !important;
+  }
+
+  .work-inner p {
+    font-size: 15.5px !important;
+  }
+
+  .work-call {
+    align-items: flex-start !important;
+  }
+
+  .form-card {
+    padding: 24px 20px !important;
+    border-radius: 24px !important;
+  }
+
+  .form-card h3 {
+    font-size: 28px !important;
+  }
+
+  .two-fields {
+    grid-template-columns: 1fr !important;
+  }
+
+  .input-group input,
+  .input-group select,
+  .field select {
+    min-height: 52px !important;
+    font-size: 15px !important;
+  }
+
+  .check {
+    font-size: 14px !important;
+  }
+
+  .footer {
+    padding-top: 44px !important;
+  }
+
+  .footer-grid {
+    gap: 22px !important;
+  }
+
+  .footer-bottom {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand-slogan {
+    display: none !important;
+  }
+
+  .brand-logo {
+    width: 118px !important;
+    flex-basis: 118px !important;
+  }
+
+  .hero-photo {
+    height: 390px !important;
+    min-height: 390px !important;
+    max-height: 390px !important;
+  }
+
+  .photo-message h2 {
+    font-size: 31px !important;
+  }
+
+  .hero-title-area h1 {
+    font-size: 34px !important;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  .facebook-video-frame {
+    min-height: 390px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: min(100% - 22px, 100%) !important;
+  }
+
+  .hero-content {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .request-card,
+  .form-card,
+  .microcredit-copy,
+  .real-estate-side-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .photo-message h2 {
+    font-size: 29px !important;
+  }
+
+  .section-title h2,
+  .form-copy h2,
+  .real-estate-header h2 {
+    font-size: 29px !important;
+  }
+}

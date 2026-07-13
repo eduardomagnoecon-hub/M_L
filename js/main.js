@@ -152,3 +152,23 @@ megaItems.forEach((item) => {
     });
   }
 });
+
+
+
+// Ajuste móvil: cerrar el menú al tocar un enlace final
+document.querySelectorAll("#navLinks a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 1150 && navLinks) {
+      navLinks.classList.remove("active");
+      document.querySelectorAll(".has-mega.open").forEach((item) => item.classList.remove("open"));
+    }
+  });
+});
+
+// Ajuste móvil: cerrar menú con tecla Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navLinks) {
+    navLinks.classList.remove("active");
+    document.querySelectorAll(".has-mega.open").forEach((item) => item.classList.remove("open"));
+  }
+});
