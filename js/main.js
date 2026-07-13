@@ -215,3 +215,35 @@ document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
     }
   });
 });
+
+
+
+// AJUSTE FINAL 17: despliegue móvil confiable de submenús
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest(".has-mega > .nav-trigger");
+  if (!trigger || window.innerWidth > 1150) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+
+  const currentItem = trigger.closest(".has-mega");
+  if (!currentItem) return;
+
+  const willOpen = !currentItem.classList.contains("open");
+
+  document.querySelectorAll(".has-mega.open").forEach((item) => {
+    if (item !== currentItem) item.classList.remove("open");
+  });
+
+  currentItem.classList.toggle("open", willOpen);
+
+  if (navLinks) {
+    navLinks.classList.add("active");
+    navLinks.scrollLeft = 0;
+  }
+
+  setTimeout(() => {
+    window.scrollTo(window.scrollX, window.scrollY);
+  }, 20);
+}, true);

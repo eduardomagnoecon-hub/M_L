@@ -3818,3 +3818,160 @@ input[type="range"] { width: 100%; margin-top: 11px; accent-color: #4d42d0; curs
     transform: none !important;
   }
 }
+
+
+
+/* =========================================================
+   AJUSTE FINAL 17: SUBMENÚS MÓVILES FUNCIONANDO
+   Mantiene cabecera fija y reactiva los despliegues.
+========================================================= */
+
+@media (max-width: 1150px) {
+  .header .nav {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  .header .nav .has-mega {
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .header .nav .has-mega > .nav-trigger {
+    cursor: pointer !important;
+    user-select: none !important;
+  }
+
+  /* Estado cerrado */
+  .header .nav .has-mega > .mega-menu {
+    display: none !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0 0 0 !important;
+    padding: 14px !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    grid-template-columns: 1fr !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+    background:
+      radial-gradient(circle at 96% 8%, rgba(231,185,79,.16), transparent 32%),
+      linear-gradient(145deg, #ffffff 0%, #fbf9ff 100%) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.98),
+      0 14px 30px rgba(39,34,122,.10) !important;
+  }
+
+  /* Estado abierto */
+  .header .nav .has-mega.open > .mega-menu {
+    display: grid !important;
+  }
+
+  .header .nav .has-mega.open > .nav-trigger {
+    background:
+      linear-gradient(145deg, rgba(248,237,208,.95), rgba(255,255,255,.98)) !important;
+    border-color: rgba(201,150,42,.42) !important;
+    box-shadow: 0 10px 24px rgba(201,150,42,.14) !important;
+    color: var(--primary) !important;
+  }
+
+  .header .nav .has-mega.open > .nav-trigger span {
+    transform: rotate(180deg) !important;
+  }
+
+  .header .nav .mega-menu::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .header .nav .mega-menu .mega-column {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .header .nav .mega-menu .mega-column + .mega-column {
+    margin-top: 14px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(230,225,241,.95) !important;
+  }
+
+  .header .nav .mega-menu .mega-column h4 {
+    margin: 0 0 12px !important;
+    padding: 0 4px !important;
+    font-size: 15px !important;
+    color: var(--primary-dark) !important;
+    line-height: 1.25 !important;
+  }
+
+  .header .nav .mega-menu .mega-link {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    padding: 13px 12px !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid rgba(230,225,241,.98) !important;
+    box-shadow: 0 8px 18px rgba(39,34,122,.055) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    transform: none !important;
+  }
+
+  .header .nav .mega-menu .mega-link:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .header .nav .mega-menu .mega-link > span {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    border-radius: 14px !important;
+    display: grid !important;
+    place-items: center !important;
+    background: #f7f4ff !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(39,34,122,.12) !important;
+  }
+
+  .header .nav .mega-menu .mega-link div {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .header .nav .mega-menu .mega-link strong,
+  .header .nav .mega-menu .mega-link b {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    font-size: 14.2px !important;
+    line-height: 1.25 !important;
+  }
+
+  .header .nav .mega-menu .mega-link small {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+}
