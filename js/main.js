@@ -172,3 +172,17 @@ document.addEventListener("keydown", (event) => {
     document.querySelectorAll(".has-mega.open").forEach((item) => item.classList.remove("open"));
   }
 });
+
+
+
+// Ajuste móvil final: solo un megamenú abierto a la vez
+document.querySelectorAll(".has-mega .nav-trigger").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    if (window.innerWidth <= 1150) {
+      const currentItem = trigger.closest(".has-mega");
+      document.querySelectorAll(".has-mega.open").forEach((item) => {
+        if (item !== currentItem) item.classList.remove("open");
+      });
+    }
+  });
+});
